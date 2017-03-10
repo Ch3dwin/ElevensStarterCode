@@ -33,6 +33,8 @@ public class Card {
 	 */
 	public Card(String cardRank, String cardSuit, int cardPointValue) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+                this.suit = cardSuit;
+                this.rank = cardRank;
 	}
 
 
@@ -42,6 +44,7 @@ public class Card {
 	 */
 	public String suit() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+                return suit;
    }
 
 	/**
@@ -50,6 +53,7 @@ public class Card {
 	 */
 	public String rank() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+                return rank;
 	}
 
    /**
@@ -83,5 +87,6 @@ public class Card {
 	@Override
 	public String toString() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+                return rank() + " of " suit() + "(point value = " pointValue();
 	}
 }
