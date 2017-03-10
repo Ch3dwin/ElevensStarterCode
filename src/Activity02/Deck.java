@@ -31,6 +31,13 @@ public class Deck {
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+                for(int x = ranks.length; x != 0; x--){
+                    for(int y = suits.length; y != 0; y--){
+                        Card temp = new Card(ranks[x], suits[y], values[y]);
+                        cards.add(temp);
+                        this.size++;
+                    }
+                }
 	}
 
 
@@ -40,6 +47,10 @@ public class Deck {
 	 */
 	public boolean isEmpty() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+                if(this.size <= 0){
+                    return false
+                }
+                return true
 	}
 
 	/**
@@ -48,6 +59,7 @@ public class Deck {
 	 */
 	public int size() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+                return size;
 	}
 
 	/**
@@ -65,6 +77,9 @@ public class Deck {
 	 */
 	public Card deal() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+                Card temp = cards[cards.size()];
+                cards.remove(cards.size());
+                return temp;
 	}
 
 	/**
